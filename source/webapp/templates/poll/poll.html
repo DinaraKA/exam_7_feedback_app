@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 {% block menu %}
     <li><a href="{% url 'poll_update' poll.pk %}">Update</a></li>
     <li><a href="{% url 'poll_delete' poll.pk %}">Delete</a></li>
@@ -13,7 +14,7 @@
             <div class="choices-list">
                 {% for choice in poll.choices.all %}
                     <div class="choice">
-                        <div class="pre">{{ choice.text }}</div>
+                        <div class="pre">{{ choice.text }} ( )</div>
                         <p class="comment-links">
                             <a href="{% url 'choice_update' choice.pk %}">Update</a>
                             <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
