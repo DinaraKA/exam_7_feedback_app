@@ -1,0 +1,108 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "Are you first time using this app?",
+    "created_at": "2019-10-19T06:28:28.207Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "Do you like the app?",
+    "created_at": "2019-10-19T06:28:38.170Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "What is the favorite point on the app?",
+    "created_at": "2019-10-19T06:30:01.652Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "What you didn't like?",
+    "created_at": "2019-10-19T06:30:42.978Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "How do you know about this app?",
+    "created_at": "2019-10-19T06:30:54.341Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "Will use this app again?",
+    "created_at": "2019-10-19T06:31:15.053Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "text": "yes",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "text": "no",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "text": "internet",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "text": "style",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "text": "structure",
+    "poll": 4
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$SbLEVF7clWkV$7Ssl4YpHPWaig3vgXu/36iZS9y8ky927YAN/j0h8WZ0=",
+    "last_login": "2019-10-19T06:27:11.097Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-18T18:15:31.063Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
