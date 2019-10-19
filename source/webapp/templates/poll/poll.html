@@ -9,6 +9,24 @@
             <h3>Question: {{ poll.question}}</h3>
             <hr class="my-4">
             <p><b>Created date: </b>{{ poll.created_at|date:'Y-m-d H:i:s' }}</p>
+            <h3><b>Answers for this poll:</b></h3>
+            <div class="choices-list">
+                {% for choice in poll.choices.all %}
+                    <div class="choice">
+                        <div class="pre">{{ choice.text }}</div>
+                        <p class="comment-links">
+                            <a href="{% url 'choice_update' choice.pk %}">Update</a>
+                            <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
+                        </p>
+                    </div>
+                {% empty %}
+                    <p>No choices yet.</p>
+                {% endfor %}
+            </div>
         </div>
+        <a href="{% url 'poll_choice_create' poll.pk %}" class="btn">Add answer</a>
     </div>
 {% endblock %}
+
+
+

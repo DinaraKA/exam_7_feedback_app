@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Delete Poll{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>Are you sure want to delete this answer?</h2>
+            <form method="POST" action="{% url "choice_delete" choice.pk %}" class="text-center">
+                {% csrf_token %}
+                <p class="lead">{{ choice.text }}</p>
+                <hr class="my-4">
+                <button type="submit" class="btn btn-dark" value="Подтвердить">Yes</button>
+                <a href="{% url 'poll_view' choice.poll.pk %}">No</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
