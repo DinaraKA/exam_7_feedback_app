@@ -11,7 +11,7 @@
                 {% csrf_token %}
                 <p class="lead">{{ poll.question }}</p>
                 <hr class="my-4">
-                <button type="submit" class="btn btn-dark" value="Подтвердить">Yes</button>
+                <button type="submit" class="btn btn-yes" value="Подтвердить">Yes</button>
                 <a href="{% url 'poll_view' poll.pk %}">No</a>
             </form>
         </div>

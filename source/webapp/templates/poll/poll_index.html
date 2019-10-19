@@ -17,6 +17,7 @@
                    <th scope="col">Created Date</th>
                    <th scope="col">Update</th>
                    <th scope="col">Delete</th>
+                   <th scope="col">Answer</th>
                 </tr>
             </thead>
             {% for poll in polls %}
@@ -25,8 +26,9 @@
                         <th scope="row">{{ forloop.counter }}</th>
                         <td><a href="{% url 'poll_view' poll.pk %}">{{ poll.question }}</a></td>
                         <td>{{ poll.created_at|date:'D, d M Y G:i:s'}}</td>
-                        <td><a href="{% url 'poll_update' poll.pk %}">&#x270E;</a></td>
-                        <td><a href="{% url 'poll_delete' poll.pk %}">&#9986;</a></td>
+                        <td style="text-align: center"><a href="{% url 'poll_update' poll.pk %}">&#x270E;</a></td>
+                        <td style="text-align: center"><a href="{% url 'poll_delete' poll.pk %}">&#9986;</a></td>
+                        <td><a href="{% url 'answer_choice_add' poll.pk %}">Answer</a></td>
                     </tr>
                 </tbody>
             {% endfor %}

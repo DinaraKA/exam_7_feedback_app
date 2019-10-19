@@ -85,9 +85,19 @@ table a{
     background: white;
 }
 
+a{
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
 .btn {
     background: #6a7dff;
     color: white;
+    margin: 15px;
 }
 
 .btn a{
@@ -95,6 +105,13 @@ table a{
 }
 .btn:hover{
     color: black;
+}
+
+.btn-yes {
+    background: transparent;
+    border: none;
+    color: rgb(0, 123, 255);
+    margin-top: 13px;
 }
 .tables {
     display: inline-flex;
@@ -115,4 +132,6 @@ table a{
 
 .pre {
     white-space: pre-wrap;
+    font-style: italic;
+
 }
